@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_25sdp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/welcome"
+        android:textColor="#1662FB"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_38sdp"
+        android:text="@string/sign_in_to_continue"
+        android:textColor="#000"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:hint="@string/email"
+        app:boxCornerRadiusBottomEnd="@dimen/_32sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_32sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_32sdp"
+        app:boxCornerRadiusTopStart="@dimen/_32sdp"
+        app:boxStrokeColor="#3E3D3D"
+        app:hintTextColor="#1662FB"
+        app:startIconDrawable="@drawable/ic_email_24px"
+        app:startIconTint="#1662FB">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        app:boxCornerRadiusBottomEnd="@dimen/_32sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_32sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_32sdp"
+        app:boxCornerRadiusTopStart="@dimen/_32sdp"
+        app:boxStrokeColor="#3E3D3D"
+        app:hintTextColor="#1662FB"
+        app:startIconDrawable="@drawable/ic_https_24px"
+        app:startIconTint="#1662FB">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/remember_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="@string/remember_me"
+        android:textColor="#1662FB"
+        app:buttonTint="#1662FB" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logIn_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_25sdp"
+        android:paddingRight="@dimen/_25sdp"
+        android:text="@string/log_in_with_your_account"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12ssp"
+        app:backgroundTint="#1662FB"
+        app:cornerRadius="@dimen/_32sdp"
+        app:rippleColor="#000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log_in_with"
+        android:textColor="#1662FB" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_35sdp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/facebook_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_weight="1"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/facebook"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12ssp"
+            app:backgroundTint="#1662FB"
+            app:cornerRadius="@dimen/_10sdp"
+            app:icon="@drawable/ic_facebook_24px"
+            app:rippleColor="#000"
+            tools:ignore="RtlCompat" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/google_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/google"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12ssp"
+            app:backgroundTint="#FA0202"
+            app:cornerRadius="@dimen/_10sdp"
+            app:icon="@drawable/ic_google_icon"
+            app:rippleColor="#000" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/newUser_btn"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_user_create_account"
+        android:textAllCaps="false"
+        android:textColor="#1662FB"
+        android:textSize="@dimen/_12ssp"
+        app:cornerRadius="@dimen/_30sdp"
+        app:rippleColor="#1662FB"
+        app:strokeColor="#1662FB" />
+
+</LinearLayout>
